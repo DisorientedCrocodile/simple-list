@@ -1,7 +1,7 @@
 #include "include/list.h"
 
 void List::print_menu() {
-    system("clear");
+    // system("clear");
     int choice;
     cin.clear();
 
@@ -20,15 +20,15 @@ void List::print_menu() {
         return;
     }
     else if (choice == 1) {
-        system("clear");
+        //system("clear");
         print_list();
     }
     else if (choice == 2) {
-        system("clear");
+        //system("clear");
         add_item();
     }
     else if (choice == 3) {
-        system("clear");
+        //system("clear");
         delete_item();
     }
     else {
@@ -94,4 +94,19 @@ void List::print_list() {
         cout << "Invalid choice. Quitting...\n";
     }
     
+}
+void List::find_userList() {
+    bool userFound = false;
+    //system("clear");
+    cout << "***Welcome" << name << "***\n";
+
+    for (int userIndex = 0; userIndex < (int)mainList.size(); userIndex++) {
+        cout << mainList[userIndex][0] << "\n";
+        if (mainList[userIndex][0] == name) {
+            cout << "User has been found: " << mainList[userIndex][0] << "\n";
+            list = mainList[userIndex];
+            userFound = true;
+            break;
+        }
+    }
 }

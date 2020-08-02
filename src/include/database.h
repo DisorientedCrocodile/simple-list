@@ -14,9 +14,9 @@ class Database {
         ~Database() {
             //Deconstructor
         }
-        void write(vector<string> list);
-        void read();
-        
-        vector<string> list;
+        vector<vector<string>> mainList;
         string name;
+
+        void write(vector<vector<string>> mainlist);
+        vector<vector<string>> read();
 };
