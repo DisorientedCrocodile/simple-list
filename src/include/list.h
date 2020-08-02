@@ -16,9 +16,11 @@ class List{
         void print_list();
         void add_item();
         void delete_item();
-        void find_userList();
+        bool find_userList();
+        void save_list();
         
         vector<vector<string>> mainList;
         vector<string> list;
         string name;
+        int currentUserIndex;
 };
