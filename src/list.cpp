@@ -17,7 +17,7 @@ void List::print_menu() {
 
     if (choice == 4) {
         cout << "Qutting...\n";
-        exit(0);
+        return;
     }
     else if (choice == 1) {
         system("clear");
